@@ -1,0 +1,81 @@
+assistant_file: /home/pi/assistant_proj_gzpweG07N3x.zip
+skills:
+  - package_name: timelogger
+    class_name: TimeLogger
+    pip: ./snips-time-skill
+    intents:
+      - intent: askTime
+        action: |
+          {%
+          snips.dialogue.speak(snips.skill.sayTime())
+          %}
+  - package_name: datelogger
+    class_name: DateLogger
+    pip: ./snips-date-skill
+    intents:
+      - intent: askDate
+        action: |
+          {%
+          sentence = snips.skill.sayDate()
+          print sentence
+          snips.dialogue.speak(sentence)
+          %}
+  - intent: askDay
+    action: |
+      {%
+      dayNumber = snips.intent.askDay[0]
+      month = snips.intent.Month[0]
+      year = snips.intent.Year[0]
+      sentence = snips.skill.racine(number1)
+      snips.dialogue.speak(result)
+      %}
+  - package_name: calcul_skill
+    class_name: Calculator
+    pip: ./snips-calculator-skill
+    intents:
+      - intent: addition
+        action: |
+          {%
+          number1 = snips.intent.Number[0]
+          number2 = snips.intent.Number[1]
+          result = snips.skill.addition(number1, number2)
+          snips.dialogue.speak(result)
+          %}
+      - intent: soustraction
+        action: |
+          {%
+          number1 = snips.intent.Number[0]
+          number2 = snips.intent.Number[1]
+          result = snips.skill.soustraction(number1, number2)
+          snips.dialogue.speak(result)
+          %}
+      - intent: multiplication
+        action: |
+          {%
+          number1 = snips.intent.Number[0]
+          number2 = snips.intent.Number[1]
+          result = snips.skill.multiplication(number1, number2)
+          snips.dialogue.speak(result)
+          %}
+      - intent: division
+        action: |
+          {%
+          number1 = snips.intent.Number[0]
+          number2 = snips.intent.Number[1]
+          result = snips.skill.division(number1, number2)
+          snips.dialogue.speak(result)
+          %}
+      - intent: squared
+        action: |
+          {%
+          number1 = snips.intent.Number[0]
+          result = snips.skill.squared(number1)
+          snips.dialogue.speak(result)
+          %}
+      - intent: racine
+        action: |
+          {%
+          number1 = snips.intent.Number[0]
+          result = snips.skill.racine(number1)
+          snips.dialogue.speak(result)
+          %}

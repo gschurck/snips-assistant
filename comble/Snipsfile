@@ -1,0 +1,11 @@
+assistant_file: /home/pi/assistant_proj_gzpweG07N3x.zip
+skills:
+  - package_name: saycomble
+    class_name: Comble
+    pip: ./comble
+    intents:
+      - intent: Comble
+        action: |
+          {%
+          snips.dialogue.speak(snips.skill.sayComble())
+          %}

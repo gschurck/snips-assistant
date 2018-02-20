@@ -1,0 +1,11 @@
+assistant_file: /home/pi/assistant_proj_gzpweG07N3x.zip
+skills:
+  - package_name: datelogger
+    class_name: DateLogger
+    pip: ./snips-date-skill
+    intents:
+      - intent: askDate
+        action: |
+          {%
+          snips.dialogue.speak(snips.skill.sayDate())
+          %}
