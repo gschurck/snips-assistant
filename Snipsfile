@@ -20,15 +20,15 @@ skills:
           print sentence
           snips.dialogue.speak(sentence)
           %}
-  - intent: askDay
-    action: |
-      {%
-      dayNumber = snips.intent.askDay[0]
-      month = snips.intent.Month[0]
-      year = snips.intent.Year[0]
-      sentence = snips.skill.racine(number1)
-      snips.dialogue.speak(result)
-      %}
+      - intent: askDay
+        action: |
+          {%
+          dayNumber = snips.intent.askDay[0]
+          month = snips.intent.Month[0]
+          year = snips.intent.Year[0]
+          sentence = snips.skill.racine(number1)
+          snips.dialogue.speak(result)
+          %}
   - package_name: calcul_skill
     class_name: Calculator
     pip: ./snips-calculator-skill
@@ -39,14 +39,6 @@ skills:
           number1 = snips.intent.Number[0]
           number2 = snips.intent.Number[1]
           result = snips.skill.addition(number1, number2)
-          snips.dialogue.speak(result)
-          %}
-      - intent: soustraction
-        action: |
-          {%
-          number1 = snips.intent.Number[0]
-          number2 = snips.intent.Number[1]
-          result = snips.skill.soustraction(number1, number2)
           snips.dialogue.speak(result)
           %}
       - intent: multiplication

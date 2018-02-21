@@ -15,11 +15,6 @@ class Calculator:
         total = type_checker(total)
         return "Le résultat est {}".format(total)
 
-    def soustraction(self, number1, number2):
-        total = number1 - number2
-        total = type_checker(total)
-        return "Le résultat est {}".format(total)
-
     def division(self, number1, number2):
         total = number1 / number2
         total = type_checker(total)
