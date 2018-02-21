@@ -23,11 +23,14 @@ skills:
       - intent: askDay
         action: |
           {%
-          dayNumber = snips.intent.askDay[0]
-          month = snips.intent.Month[0]
-          year = snips.intent.Year[0]
-          sentence = snips.skill.racine(number1)
-          snips.dialogue.speak(result)
+          if snips.intent.dayNumber and snips.intent.Month and snips.intent.Year:
+            dayNumber = snips.intent.dayNumber[0]
+            month = snips.intent.Month[0]
+            year = snips.intent.Year[0]
+            sentence = snips.skill.sayDay(year, month, dayNumber)
+            snips.dialogue.speak(sentence)
+          else:
+            snips.dialogue.speak("Je ne comprends pas votre question")
           %}
   - package_name: calcul_skill
     class_name: Calculator
