@@ -74,3 +74,23 @@ skills:
           result = snips.skill.racine(number1)
           snips.dialogue.speak(result)
           %}
+  - package_name: saycomble
+    class_name: Comble
+    pip: ./comble
+    intents:
+      - intent: Comble
+        action: |
+          {%
+          sentence = sayComble()
+          snips.dialogue.speak(sentence)
+          %}
+  - package_name: pile_ou_face-game
+    class_name: Pile_ou_face
+    pip: ./pile_ou_face-skill
+    intents:
+      - intent: pile_ou_face
+        action: |
+          {%
+          sentence = snips.skill.random_pile_ou_face()
+          snips.dialogue.speak(sentence)
+          %}

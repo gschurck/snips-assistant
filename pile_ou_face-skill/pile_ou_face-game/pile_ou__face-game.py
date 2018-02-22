@@ -1,5 +1,5 @@
 import random
-class pile_ou_face():
+class Pile_ou_face():
     def __init__(self,locale=None):
         pass
     def random_pile_ou_face(self):

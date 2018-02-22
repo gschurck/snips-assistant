@@ -24,9 +24,8 @@ class DateLogger:
         return "Le {} {} {} est un {}".format(dayNumber, month, year, jours[now.weekday()])
 
 if  __name__ == "__main__":
-    print("hi")
     heysnips = DateLogger()
     """
-    heysnips.sayDate()®
+    heysnips.sayDate()
     heysnips.sayDay()
     """
