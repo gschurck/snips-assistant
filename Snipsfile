@@ -81,8 +81,7 @@ skills:
       - intent: Comble
         action: |
           {%
-          sentence = sayComble()
-          snips.dialogue.speak(sentence)
+          snips.dialogue.speak("C'est qu'un muet dise à un sourd qu'un aveugle les espionne")
           %}
   - package_name: pile_ou_face-game
     class_name: Pile_ou_face

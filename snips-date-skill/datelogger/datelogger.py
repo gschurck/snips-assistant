@@ -25,7 +25,3 @@ class DateLogger:
 
 if  __name__ == "__main__":
     heysnips = DateLogger()
-    """
-    heysnips.sayDate()
-    heysnips.sayDay()
-    """

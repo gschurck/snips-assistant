@@ -11,5 +11,5 @@ class Pile_ou_face():
 
 if  __name__ == "__main__":
     heysnips = pile_ou_face()
-    heysnips.random_pile_ou_face()
+    #heysnips.random_pile_ou_face()
     #print heysnips.random_pile_ou_face()
